@@ -34,14 +34,14 @@ SELECT
 ## Таблица для примеров
 
 таблица employees
-
-id | name  | age | salary
-1  | user1 | 23  | 400
-2  | user2 | 25  | 500
-3  | user3 | 23  | 500
-4  | user4 | 30  | 900
-5  | user5 | 27  | 500
-6  | user6 | 28  | 900
+| id | name  | age | salary |
+|----|-------|-----|--------|
+| 1  | user1 | 23  | 400    |
+| 2  | user2 | 25  | 500    |
+| 3  | user3 | 23  | 500    |
+| 4  | user4 | 30  | 900    |
+| 5  | user5 | 27  | 500    |
+| 6  | user6 | 28  | 900    |
 
 ## Примеры
 
@@ -52,8 +52,8 @@ SELECT * FROM employees WHERE id>3
 ```
 
 Результат:
-
-id | name  | age | salary
+| id | name  | age | salary
+|----|-------|-----|--------|
 4  | user4 | 30  | 900
 5  | user5 | 27  | 500
 6  | user6 | 28  | 900
@@ -65,26 +65,32 @@ SELECT * FROM employees WHERE id<=3
 ```
 
 Результат:
-
-id | name  | age | salary
+| id | name  | age | salary
+|--- |-------|-----|--------|
 1  | user1 | 23  | 400
 2  | user2 | 25  | 500
 3  | user3 | 23  | 500
 
 ### Пример 3
 Выбор записей, у которых поле id равно 3-м:
+```sql
 SELECT * FROM employees WHERE id=3
+```
 
 Результат:
-id | name  | age | salary
+| id | name  | age | salary
+|--- |-------|-----|--------|
 3  | user3 | 23  | 500
 
 ### Пример 4
 Выбор записей, у которых поле id НЕ равно 3-м:
+```sql
 SELECT * FROM employees WHERE id!=3
+```
 
 Результат:
-id | name  | age | salary
+| id | name  | age | salary
+|--- |-------|-----|--------|
 1  | user1 | 23  | 400
 2  | user2 | 25  | 500
 4  | user4 | 30  | 900
@@ -92,14 +98,19 @@ id | name  | age | salary
 6  | user6 | 28  | 900
 
 Альтернативная запись:
+```sql
 SELECT * FROM employees WHERE id<>3
+```
 
 ### Пример 5
 Выбор всех записей из таблицы (без условия WHERE):
+```sql
 SELECT * FROM employees
+```
 
 Результат:
-id | name  | age | salary
+| id | name  | age | salary
+|--- |-------|-----|--------|
 1  | user1 | 23  | 400
 2  | user2 | 25  | 500
 3  | user3 | 23  | 500
@@ -109,10 +120,13 @@ id | name  | age | salary
 
 ### Пример 6
 Выбор конкретных полей (id, name, age):
+```sql
 SELECT id, name, age FROM employees
+```
 
 Результат:
-id | name  | age
+| id | name  | age
+|--- |-------|-----
 1  | user1 | 23
 2  | user2 | 25
 3  | user3 | 23
@@ -122,10 +136,13 @@ id | name  | age
 
 ### Пример 7
 Выбор только одного поля - name:
+```sql
 SELECT name FROM employees
+```
 
 Результат:
-name
+| name
+| --- |
 user1
 user2
 user3
